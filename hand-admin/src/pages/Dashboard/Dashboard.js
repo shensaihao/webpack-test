@@ -7,12 +7,24 @@ const { Header, Content, Footer } = Layout;
 const menu = (
     <Menu>
       <Menu.Item key="0">
-        <a href="">1st menu item</a>
+        <a href=""><Icon type="user" />个人信息</a>
       </Menu.Item>
       <Menu.Item key="1">
-        <a href="">2nd menu item</a>
+        <a href=""><Icon type="key" />修改密码</a>
       </Menu.Item>
-      <Menu.Item key="3">3rd menu item</Menu.Item>
+      <Menu.Item key="2">
+        <a href=""><Icon type="crown" />权限信息</a>
+      </Menu.Item>
+      <Menu.Item key="3">
+        <a href=""><Icon type="experiment" />授权管理</a>
+      </Menu.Item>
+      <Menu.Item key="4">
+        <a href=""><Icon type="message" />消息通知</a>
+      </Menu.Item>
+      <Menu.Divider />
+      <Menu.Item key="4">
+        <a href=""><Icon type="export" />退出登录</a>
+      </Menu.Item>
     </Menu>
   );
 export default class Dashboard extends Component {
