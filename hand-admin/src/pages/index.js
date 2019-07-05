@@ -21,10 +21,30 @@ const NotFound = Loadable({
   loader: () => import('./NotFound/NotFound.js'),
   loading: Loading
 })
+const InternshipGroup = Loadable({
+  loader:() => import('./InternshipGroup/InternshipGroup.js'),
+  loading: Loading
+})
+const RegistrationTest = Loadable({
+  loader:() => import('./RegistrationTest/RegistrationTest.js'),
+  loading: Loading
+})
+const RegistrationTestIndex = Loadable({
+  loader:() => import('./RegistrationTest/RegistrationTestIndex.js'),
+  loading: Loading
+})
+const InternshipGroupIndex = Loadable({
+  loader:() => import('./InternshipGroup/InternshipGroupIndex.js'),
+  loading: Loading
+})
 export {
   AgileManagement,
   APIManagement,
   Dashboard,
   WikiMangement,
-  NotFound
+  NotFound,
+  InternshipGroup,
+  RegistrationTest,
+  RegistrationTestIndex,
+  InternshipGroupIndex,
 }

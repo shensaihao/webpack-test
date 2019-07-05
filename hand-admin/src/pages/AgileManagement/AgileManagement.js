@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
+import Frame from '../../components/Frame'
+
 
 export default class AgileManagement extends Component {
     render() {
         return (
-            <div>
-                敏捷管理
-            </div>
+            <Frame />
         )
     }
 }

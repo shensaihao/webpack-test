@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component,Fragment } from 'react';
 import {
   Switch,
   Route,
@@ -9,6 +9,8 @@ import routes from './routes'
 class App extends Component {
   render() {
     return (
+      <Fragment>
+      <div className="main">
         <Switch>
           {
             routes.map(route => {
@@ -16,16 +18,21 @@ class App extends Component {
                 <Route
                   key={route.path}
                   path={route.path}
-                  render={(props) => {
-                    return <route.component {...props} />
+                  exact={route.isExact}
+                  render={() => {
+                    return route.path === '/'
+                      ? <Redirect to='/home' />
+                      : <route.component />
                   }}
                 />
               )
             })
           }
-          <Redirect to='/home' from='/' exact />
+          <Redirect exact to='/home' from="/" />
           <Redirect to='/404' />
         </Switch>
+      </div>
+    </Fragment>
     );
   }
 }

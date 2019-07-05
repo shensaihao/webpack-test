@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Link} from 'react-router-dom'
 import { Menu, Icon } from 'antd';
 
 
@@ -10,10 +11,10 @@ export default class Menue extends Component {
                             <SubMenu
                                 key="sub1"
                                 title={
-                                    <span>
+                                    <Link to='/registrationtest/agilemanagement'>
                                         <Icon type="mail" />
                                         <span>敏捷管理</span>
-                                    </span>
+                                    </Link>
                                 }
                             >
                                 <Menu.ItemGroup>
@@ -29,10 +30,10 @@ export default class Menue extends Component {
                             <SubMenu
                                 key="sub2"
                                 title={
-                                    <span>
+                                    <Link to='/registrationtest/apimanagement'>
                                         <Icon type="appstore" />
                                         <span>API管理</span>
-                                    </span>
+                                    </Link>
                                 }
                             >
                                 <Menu.ItemGroup>
@@ -46,10 +47,10 @@ export default class Menue extends Component {
                             <SubMenu
                                 key="sub4"
                                 title={
-                                    <span>
+                                    <Link to='/registrationtest/wikimangement'>
                                         <Icon type="setting" />
                                         <span>WiKi管理</span>
-                                    </span>
+                                    </Link>
                                 }
                             >
                                 <Menu.Item key="9">WiKi空间</Menu.Item>

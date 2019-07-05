@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react'
-import { Select, Input, Tabs, Table, Dropdown, Icon, Badge } from 'antd';
+import {Link} from 'react-router-dom'
+import { Select, Input, Tabs, Table } from 'antd';
 
 const { Option } = Select;
 const { Search } = Input;
@@ -7,7 +8,7 @@ const { TabPane } = Tabs;
 
 
 const columns1 = [
-    { title: '名称', dataIndex: 'name', key: 'name' },
+    { title: '名称', dataIndex: 'name', key: 'name',render: (text,record) => <Link to={record.url} props={text}>{text}</Link>, },
     { title: '编码', dataIndex: 'code', key: 'code' },
     { title: '类型', dataIndex: 'type', key: 'type' },
   ];
@@ -18,17 +19,19 @@ const columns1 = [
       name: '2019研发中心实习生组',
       code: 'training',
       type: '敏捷项目',
+      url:'/internshipgroup/index'
     },
     {
       key: 2,
       name: '注册的组织测试',
       code: 'org-qebh68zd9k',
       type: '组织',
+      url:'/registrationtest/index'
     }
   ];
 
   const columns2 = [
-    { title: '名称', dataIndex: 'name', key: 'name' },
+    { title: '名称', dataIndex: 'name', key: 'name',render: (text,record) => <Link to={record.url} props={text}>{text}</Link>, },
     { title: '编码', dataIndex: 'code', key: 'code' },
     { title: '类型', dataIndex: 'type', key: 'type' },
   ];
@@ -39,6 +42,7 @@ const columns1 = [
       name: '注册的组织测试',
       code: 'org-qebh68zd9k',
       type: '组织',
+      url:'/registrationtest/index'
     },
     {
         key: 2,
@@ -51,6 +55,7 @@ const columns1 = [
                 name: '2019研发中心实习生组',
                 code: 'training',
                 type: '敏捷项目',
+                url:'/internshipgroup/index'
             }
         ]
       },
@@ -77,7 +82,6 @@ function onSearch(val) {
 }
 
 export default class Modals extends Component {
-
     render() {
         return (
             <Fragment>
@@ -94,9 +98,9 @@ export default class Modals extends Component {
                         option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
                     }
                 >
-                    <Option value="jack">所有组织</Option>
-                    <Option value="lucy">注册的组织测试</Option>
-                    <Option value="tom">Choerodon</Option>
+                    <Option value="all">所有组织</Option>
+                    <Option value="register">注册的组织测试</Option>
+                    <Option value="choerodon">Choerodon</Option>
                 </Select>
                 <Search
                     placeholder="搜索组织和项目"

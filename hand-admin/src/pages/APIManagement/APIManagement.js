@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
+import Frame from '../../components/Frame'
 
 export default class APIManagement extends Component {
     render() {
         return (
-            <div>
-                API管理
-            </div>
+            <Frame />
         )
     }
 }
