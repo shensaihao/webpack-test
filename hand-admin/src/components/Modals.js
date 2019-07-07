@@ -31,7 +31,7 @@ const columns1 = [
   ];
 
   const columns2 = [
-    { title: '名称', dataIndex: 'name', key: 'name',render: (text,record) => <Link to={record.url} props={text}>{text}</Link>, },
+    { title: '名称', dataIndex: 'name', key: 'name',render: (text,record) => <Link to={{pathname: record.url,query: record.name}}>{text}</Link>, },
     { title: '编码', dataIndex: 'code', key: 'code' },
     { title: '类型', dataIndex: 'type', key: 'type' },
   ];
@@ -82,6 +82,7 @@ function onSearch(val) {
 }
 
 export default class Modals extends Component {
+    
     render() {
         return (
             <Fragment>

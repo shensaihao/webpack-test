@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
-import { Layout, Icon, Card, Badge,Dropdown, Menu } from 'antd';
+import { Layout, Icon, Badge,Dropdown, Menu,Divider } from 'antd';
 import './Dashboard.less'
 import SelectButton from '../../components/SelectButton'
+import HomeCotent from './HomeContent'
 
-const { Header, Content, Footer } = Layout;
+const { Header, Content } = Layout;
 const menu = (
     <Menu>
       <Menu.Item key="0">
@@ -30,10 +31,10 @@ const menu = (
 export default class Dashboard extends Component {
     render() {
         return (
-            <Layout>
+            <Layout style={{backgroundColor:'#fff'}}>
                 <Header className="header" style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
-                    <div className="logo" style={{ color: "white", fontSize: "28px" }}>
-                        Choerodon
+                    <div className="logo" style={{ color: "white", fontSize: "24px" }}>
+                        <a href="/home">Choerodon</a>
                     </div>
                     <SelectButton></SelectButton>
                     <div className="header-right">
@@ -55,17 +56,14 @@ export default class Dashboard extends Component {
                         </Dropdown>
                     </div>
                 </Header>
-                <Content style={{ padding: '0 50px', marginTop: 64 }}>
-                    <div style={{fontSize:'24px',margin:'10px 10px'}}>
+                <Content style={{ marginTop: 48 }}>
+                    <div style={{fontSize:'18px',margin:'10px 20px'}}>
                         <Icon type="home" style={{fontSize:'18px',marginRight:'20px'}}/>
                         首页
                     </div>
-                    <Card>
-                        <div style={{ background: '#fff', padding: 24, minHeight: 380 }}>Content</div>
-                    </Card>
-                     
+                    <Divider style={{margin:'0 0 30px 0'}}/>
+                    <HomeCotent />
                 </Content>
-                <Footer style={{ textAlign: 'center' }}>Ant Design ©2018 Created by Ant UED</Footer>
             </Layout>
         )
     }

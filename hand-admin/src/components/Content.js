@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import { Table, Divider, Tag } from 'antd';
+import {tableList} from '../request'
 
 const columns = [
     {
       title: 'Name',
       dataIndex: 'name',
       key: 'name',
-      render: text => <a href="javascript:;">{text}</a>,
+      render: text => <a href="">{text}</a>,
     },
     {
       title: 'Age',
@@ -43,9 +44,9 @@ const columns = [
       key: 'action',
       render: (text, record) => (
         <span>
-          <a href="javascript:;">Invite {record.name}</a>
+          <a href="">Invite {record.name}</a>
           <Divider type="vertical" />
-          <a href="javascript:;">Delete</a>
+          <a href="">Delete</a>
         </span>
       ),
     },
@@ -76,6 +77,9 @@ const columns = [
   ];
 
 export default class Content extends Component {
+  componentWillMount() {
+
+  }
     render() {
         return (
             <Table columns={columns} dataSource={data} />

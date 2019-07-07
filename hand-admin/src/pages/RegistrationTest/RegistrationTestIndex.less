@@ -1,10 +1,17 @@
 .header{
+    height: 48px;
+    line-height: 48px;
     background-color: #3f51b5;
     padding: 0 30px;
     position: relative;
+    z-index: 999;
     .logo{
         position: absolute;
         left: 70px;
+        a{
+            color: white;
+            text-decoration: none;
+        }
     }
     .selectbtn{
         position: absolute;
@@ -21,9 +28,12 @@
         position: absolute;
         right: 30px;
         i{
-            font-size: 20px;
+            font-size: 16px;
             color: white;
             margin: 0px 10px;
         }
     }
+}
+.ant-drawer-content-wrapper{
+    width: 279px;
 }

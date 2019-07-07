@@ -3,8 +3,6 @@ import {
     AgileManagement,
     WikiMangement,
     Dashboard,
-    InternshipGroup,
-    RegistrationTest,
     RegistrationTestIndex,
     InternshipGroupIndex
   } from './pages'

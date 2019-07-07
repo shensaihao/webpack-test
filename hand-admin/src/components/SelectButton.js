@@ -6,6 +6,7 @@ export default class SelectButton extends Component {
     state = {
         loading: false,
         visible: false,
+        selected:'选择项目'
     };
 
     showModal = () => {
@@ -29,7 +30,7 @@ export default class SelectButton extends Component {
         return (
             <Fragment>
                 <Button type="link" ghost onClick={this.showModal} className="selectbtn">
-                选择项目
+                <span>{this.state.selected}</span>
                         <Icon type="down" />
             </Button>
             <Modal

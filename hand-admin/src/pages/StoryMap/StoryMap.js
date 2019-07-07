@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
 
-
-export default class InternshipGroup extends Component {
+export default class StoryMap extends Component {
     render() {
         return (
             <div>
-                InternshipGroup
+                StoryMap
             </div>
         )
     }

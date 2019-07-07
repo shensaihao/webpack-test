@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react'
-import { Icon, Menu } from 'antd';
+import { Icon, Menu, Divider } from 'antd';
 
 export default class LeftSideBar extends Component {
     render() {
@@ -11,12 +11,13 @@ export default class LeftSideBar extends Component {
                     defaultOpenKeys={['sub1']}
                     style={{ height: '100%', borderRight: 0 }}
                 >
-                        <div style={{fontSize:'24px',height:'56px',lineHeight:'56px',marginLeft:'16px'}}> 
+                        <div style={{fontSize:'18px',height:'56px',lineHeight:'56px',marginLeft:'16px'}}> 
                         <span>
-                            <Icon type="user" style={{marginRight:'10px'}}/>
+                            <Icon type="dashboard" style={{marginRight:'10px'}}/>
                             敏捷管理
                         </span>
                         </div>
+                        <Divider style={{ margin: '0px 0' }} />
                         <Menu.Item key="2"><span>
                             <Icon type="user" />
                             代办事项

@@ -54,8 +54,8 @@ export default class Frame extends Component {
             <Layout>
                 <Header className="header">
                     <Icon className="menueIcon" onClick={this.showDrawer} type="menu" style={{ fontSize: '18px', color: 'white', float: 'left' }} />
-                    <div className="logo" style={{ color: "white", fontSize: "28px" }}>
-                        Choerodon
+                    <div className="logo" style={{ color: "white", fontSize: "24px" }}>
+                        <a href="/home">Choerodon</a>
                     </div>
                     <SelectButton />
                     <div className="header-right">
@@ -77,11 +77,13 @@ export default class Frame extends Component {
                         </Dropdown>
                     </div>
                     <Drawer
-                        title="主页"
+                    style={{marginTop:'48px'}}
+                        width='279px'
                         placement="left"
                         closable={false}
                         onClose={this.onClose}
                         visible={this.state.visible}
+                        bodyStyle={{padding:'0px 0px'}}
                     >
                         <Menue />
                     </Drawer>
