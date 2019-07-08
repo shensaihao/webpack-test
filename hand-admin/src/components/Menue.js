@@ -26,13 +26,13 @@ export default class Menue extends Component {
                     }
                 >
                     <Menu.ItemGroup>
-                        <Menu.Item key="1"><Icon type="mail" />代办事项</Menu.Item>
-                        <Menu.Item key="2"><Icon type="mail" />活跃冲刺</Menu.Item>
-                        <Menu.Item key="3"><Icon type="mail" />故事地图</Menu.Item>
-                        <Menu.Item key="4"><Icon type="mail" />问题管理</Menu.Item>
-                        <Menu.Item key="5"><Icon type="mail" />发布版本</Menu.Item>
-                        <Menu.Item key="6"><Icon type="mail" />报告工作台</Menu.Item>
-                        <Menu.Item key="7"><Icon type="mail" />设置</Menu.Item>
+                        <Menu.Item key="1"><Link to='/registrationtest/agilemanagement/1'><Icon type="mail" />代办事项</Link></Menu.Item>
+                        <Menu.Item key="2"><Link to='/registrationtest/agilemanagement/2'><Icon type="mail" />活跃冲刺</Link></Menu.Item>
+                        <Menu.Item key="3"><Link to='/registrationtest/agilemanagement/3'><Icon type="mail" />故事地图</Link></Menu.Item>
+                        <Menu.Item key="4"><Link to='/registrationtest/agilemanagement/4'><Icon type="mail" />问题管理</Link></Menu.Item>
+                        <Menu.Item key="5"><Link to='/registrationtest/agilemanagement/5'><Icon type="mail" />发布版本</Link></Menu.Item>
+                        <Menu.Item key="6"><Link to='/registrationtest/agilemanagement/6'><Icon type="mail" />报告工作台</Link></Menu.Item>
+                        <Menu.Item key="7"><Link to='/registrationtest/agilemanagement/7'><Icon type="mail" />设置</Link></Menu.Item>
                     </Menu.ItemGroup>
                 </SubMenu>
                 <SubMenu
